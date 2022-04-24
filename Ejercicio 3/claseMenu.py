@@ -15,8 +15,8 @@ class Menuop:
                 for j in range(24):
                     if self.__lista[i][j].getHumedad() < x:
                         x = self.__lista[i][j].getHumedad()
-                        dia = i
-                        hora = j
+                        dia = i+1
+                        hora = j+1
             return dia, hora
         elif var == "Temperatura":
             x = 23123123
@@ -26,8 +26,8 @@ class Menuop:
                 for j in range(24):
                     if self.__lista[i][j].getTemperatura() < x:
                         x = self.__lista[i][j].getTemperatura()
-                        dia = i
-                        hora = j
+                        dia = i+1
+                        hora = j+1
             return dia, hora
         elif var == "Presion":
             x = 23123123
@@ -37,8 +37,8 @@ class Menuop:
                 for j in range(24):
                     if self.__lista[i][j].getPresion() < x:
                         x = self.__lista[i][j].getPresion()
-                        dia = i
-                        hora = j
+                        dia = i+1
+                        hora = j+1
             return dia, hora
         else:
             return "Error"
@@ -52,8 +52,8 @@ class Menuop:
                 for j in range(24):
                     if self.__lista[i][j].getHumedad() > x:
                         x = self.__lista[i][j].getHumedad()
-                        dia = i
-                        hora = j
+                        dia = i+1
+                        hora = j+1
             return dia,hora
         elif var == "Temperatura":
             x = -123123
@@ -63,8 +63,8 @@ class Menuop:
                 for j in range(24):
                     if self.__lista[i][j].getTemperatura() > x:
                         x = self.__lista[i][j].getTemperatura()
-                        dia = i
-                        hora = j
+                        dia = i+1
+                        hora = j+1
             return dia, hora
         elif var == "Presion":
             x = -23123
@@ -74,8 +74,8 @@ class Menuop:
                 for j in range(24):
                     if self.__lista[i][j].getPresion() > x:
                         x = self.__lista[i][j].getPresion()
-                        dia = i
-                        hora = j
+                        dia = i+1
+                        hora = j+1
             return dia,hora
         else:
             return "Error"
@@ -90,7 +90,7 @@ class Menuop:
             x = 0
             for j in range(24):
                 x += self.__lista[i][j].getTemperatura()
-            print("El promedio del mes {} por cada hora es {}".format(i+1, x/30))
+            print("El promedio del dia {} por cada hora es {}".format(i+1, x/30))
 
     def Listado(self):
         x=int(input("Ingrese un numero de Dia para indicar las variables:"))
